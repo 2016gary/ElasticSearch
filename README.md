@@ -13,4 +13,4 @@
 > 10. 删除单条数据：curl -XDELETE 'localhost:9200/Index/Type/Id?pretty'
 > 11. 查看ES集群所有Index：curl 'localhost:9200/_cat/indices?v&pretty'
 > 12. 分页查询From&Size（From&Size默认分页深度为10000，超过就会报错）：curl 'localhost:9200/Index/Type/_search?pretty' -d '{"from":0,"size":100,"query":{"term":{"user":"gary"}}}'
-> 13. 分页查询scroll：(1)curl 'localhost:9200/Index/Type/_search?pretty&scroll=30m&search_type=scan&size=400' -d 'query查询语句'（scroll=30m：scroll保存时间，search_type=scan表示不排序，size=400每个分片一次返回多少条数据） (2)curl 'localhost:9200/_search/scroll?scroll=30m&pretty' -d '(1)结果中的"_scroll_id"值'
+> 13. 分页查询scroll（scroll=30m：scroll保存时间，search_type=scan表示不排序，size=400每个分片一次返回多少条数据）：(1)curl 'localhost:9200/Index/Type/_search?pretty&scroll=30m&search_type=scan&size=400' -d 'query查询语句' (2)curl 'localhost:9200/_search/scroll?scroll=30m&pretty' -d '(1)结果中的"_scroll_id"值'
