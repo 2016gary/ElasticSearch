@@ -1,4 +1,5 @@
 # ElasticSearch入门教程By Gary
+<img src="img/logo.png"  alt="无法显示该图片" />
 
 ## ES CURL常用命令：
 > 1. 检查ES集群健康状态：curl 'localhost:9200/_cat/health?v&pretty'
